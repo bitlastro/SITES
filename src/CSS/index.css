@@ -1,0 +1,108 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #c7e908;
+    color: rgb(18, 1, 95);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10px;
+}
+
+.logo {
+    font-size: 3em;
+    font-weight: bold;
+
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: rgb(0, 148, 86);
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #00bcd4;
+}
+
+.conteudo {
+    display: flex; /* Ativa Flexbox */
+    justify-content: center; /* Alinha os elementos horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    text-align: center;
+    height: 30vh; /* Ocupa a altura total da tela */
+    background-color: #011808; /* Cor de fundo */
+}
+
+.texto-esquerdo, .texto-direito {
+    width: 40%; /* Largura para os textos */
+    font-size: 1.3em; /* Tamanho da fonte */
+    line-height: 1; /* Espaçamento entre linhas */
+    color: #e26600;
+}
+.imagem-container {
+    display: flex; /* Ativa o Flexbox */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    height: 100vh; /* Define altura total da tela */
+}
+
+.imagem-container img {
+    width: 220px; /* Define a largura */
+    height: auto; /* Mantém a proporção original */
+    border: 2px solid #00bcd4; /* Borda opcional */
+    border-radius: 135px; /* Bordas arredondadas */
+}
+.imagemdomeio {
+    width: 100%; /* Largura total */
+    margin: 0;
+    padding: 0;
+    background-color: #18181888; /* Cor de fundo opcional */
+}
+
+.imagemdomeio img {
+    width: 100%; /* Largura total */
+    height: 600px; /* Altura desejada */
+    object-fit: contain; /* Mantém toda a imagem visível */
+    display: block;
+}
+
+.textooficial {
+    background-color: #1f1f1f; /* Cor de fundo */
+    width: 100%; /* Largura para os textos */
+    font-size: 1.3em; /* Tamanho da fonte */
+    line-height: 1; /* Espaçamento entre linhas */
+    color: #90d6f7;
+}
+
+h1 {
+    text-align: center; /* Centraliza o texto */
+    color: rgba(13, 106, 245, 0.808); /* Altera a cor para vermelho */
+}
+
+.p1 {
+    text-align: center; /* Centraliza o texto dentro do bloco */
+    color: rgb(90, 181, 255); /* Cor do texto */
+    width: 100%; /* Garante que o elemento ocupe toda a largura disponível */
+    margin: 0 auto; /* Centraliza o bloco horizontalmente */
+    display: block; /* Garante que o elemento seja tratado como bloco */
+}
+
+.p2 {
+    color: green;
+    font-style: italic;
+}
