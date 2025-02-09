@@ -151,6 +151,16 @@ h1 {
         text-align: center;
     }
 
+    .COMOCOMPRAR {
+    padding: 10px;
+    background-color: #1f1f1f;
+    width: 100%;
+    padding: 20px;
+    font-size: 1.2em;
+    color: #90d6f7;
+    text-align: center;
+}
+
     /* Garante que o conteúdo não ultrapasse a largura da tela */
     .textooficial {
         padding: 10px;
