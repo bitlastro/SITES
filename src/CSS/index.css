@@ -135,7 +135,6 @@ h1 {
     font-weight: bold;
 }
 
-/* Seção "Como Comprar" */
 .COMOCOMPRAR {
     background-color: #00a97b;
     width: 100%;
@@ -164,6 +163,10 @@ h1 {
     .texto-esquerdo, .texto-direito {
         width: 100%;
         text-align: center;
+    }
+
+    .imagem-container img {
+        max-width: 200px; /* Limita a largura da imagem para telas pequenas */
     }
 
     .textooficial, .textooficialsocio {
