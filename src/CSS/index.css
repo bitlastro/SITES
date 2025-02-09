@@ -138,6 +138,7 @@ h1 {
 .COMOCOMPRAR {
     background-color: #00a97b;
     width: 100%;
+    max-width: 100%;
     padding: 20px;
     font-size: 1.2em;
     color: #2900e1;
