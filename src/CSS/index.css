@@ -1,7 +1,8 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    overflow-x: hidden; /* Impede o overflow horizontal */
+    overflow-x: hidden; /* Impede rolagem lateral */
+    box-sizing: border-box;
 }
 
 header {
@@ -12,6 +13,7 @@ header {
     align-items: center;
     padding: 20px 10px;
     flex-wrap: wrap;
+    width: 100%;
 }
 
 .logo {
@@ -49,6 +51,8 @@ nav ul li a:hover {
     text-align: center;
     padding: 20px;
     background-color: #011808;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .texto-esquerdo, .texto-direito {
@@ -57,8 +61,9 @@ nav ul li a:hover {
     font-size: 1.2em;
     color: #e26600;
     padding: 10px;
-    word-wrap: break-word; /* Quebra palavras longas para evitar overflow */
-    overflow-wrap: break-word; /* Garante que o conteúdo não ultrapasse a largura */
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    width: 100%;
 }
 
 .imagem-container {
@@ -91,34 +96,26 @@ nav ul li a:hover {
     display: block;
 }
 
-.textooficial {
+.textooficial, .textooficialsocio {
     background-color: #1f1f1f;
     width: 100%;
     padding: 20px;
     font-size: 1.2em;
     color: #90d6f7;
     text-align: center;
-}
-
-.textooficialsocio {
-    background-color: #1f1f1f;
-    width: 100%;
-    padding: 20px;
-    font-size: 1.2em;
-    color: #90d6f7;
-    text-align: center;
+    box-sizing: border-box;
 }
 
 h1 {
     color: rgba(13, 106, 245, 0.808);
 }
 
-.p1, .p2, .p3 {
+.p1, .p2, .p3, .p4 {
     max-width: 90%;
     margin: 10px auto;
     display: block;
-    word-wrap: break-word; /* Quebra palavras longas nos parágrafos */
-    overflow-wrap: break-word; /* Evita o overflow do texto */
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
 .p2 {
@@ -127,16 +124,28 @@ h1 {
 }
 
 .p3 {
-    color: rgb(255, 96, 96);
+    color: black;
+    font-size: 24px; /* Ajusta o tamanho */
+    font-weight: bold;
 }
+
 .p4 {
-    color: black;  
-    font-size: 24px; /* Ajuste o tamanho conforme necessário */
-    font-weight: bold; /* Deixa o texto mais destacado */
+    color: black;
+    font-size: 24px;
+    font-weight: bold;
 }
 
+/* Seção "Como Comprar" */
+.COMOCOMPRAR {
+    background-color: #00a97b;
+    width: 100%;
+    padding: 20px;
+    font-size: 1.2em;
+    color: #2900e1;
+    text-align: center;
+}
 
-/* Ajustes para telas menores */
+/* Responsividade para telas menores */
 @media (max-width: 768px) {
     header {
         flex-direction: column;
@@ -157,17 +166,7 @@ h1 {
         text-align: center;
     }
 
-    .COMOCOMPRAR {
-    background-color: #00a97b;
-    width: 100%;
-    padding: 20px;
-    font-size: 1.2em;
-    color: #2900e1;
-    text-align: center;
-}
-
-    /* Garante que o conteúdo não ultrapasse a largura da tela */
-    .textooficial {
+    .textooficial, .textooficialsocio {
         padding: 10px;
     }
 }
