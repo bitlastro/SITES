@@ -112,7 +112,7 @@ h1 {
 }
 .p3 {
     text-align: center; /* Centraliza o texto dentro do bloco */
-    color: rgb(73, 0, 0); /* Cor do texto */
+    color: rgb(255, 96, 96); /* Cor do texto */
     width: 100%; /* Garante que o elemento ocupe toda a largura disponível */
     margin: 0 auto; /* Centraliza o bloco horizontalmente */
     display: block; /* Garante que o elemento seja tratado como bloco */
