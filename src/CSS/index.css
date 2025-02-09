@@ -1,6 +1,7 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
+    overflow-x: hidden; /* Impede o overflow horizontal */
 }
 
 header {
@@ -10,7 +11,7 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 20px 10px;
-    flex-wrap: wrap; /* Permite que os itens quebrem para a linha de baixo se necessário */
+    flex-wrap: wrap;
 }
 
 .logo {
@@ -23,7 +24,7 @@ nav ul {
     margin: 0;
     padding: 0;
     display: flex;
-    flex-wrap: wrap; /* Permite que os botões se ajustem em telas menores */
+    flex-wrap: wrap;
 }
 
 nav ul li {
@@ -42,7 +43,7 @@ nav ul li a:hover {
 
 .conteudo {
     display: flex;
-    flex-wrap: wrap; /* Ajusta os elementos para telas menores */
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -51,11 +52,13 @@ nav ul li a:hover {
 }
 
 .texto-esquerdo, .texto-direito {
-    flex: 1; /* Para melhor adaptação */
-    min-width: 300px; /* Garante que os textos não fiquem muito pequenos */
+    flex: 1;
+    min-width: 300px;
     font-size: 1.2em;
     color: #e26600;
     padding: 10px;
+    word-wrap: break-word; /* Quebra palavras longas para evitar overflow */
+    overflow-wrap: break-word; /* Garante que o conteúdo não ultrapasse a largura */
 }
 
 .imagem-container {
@@ -68,7 +71,7 @@ nav ul li a:hover {
 
 .imagem-container img {
     width: 100%;
-    max-width: 220px; /* Limita o tamanho da imagem */
+    max-width: 220px;
     height: auto;
     border: 2px solid #00bcd4;
     border-radius: 50%;
@@ -105,6 +108,8 @@ h1 {
     max-width: 90%;
     margin: 10px auto;
     display: block;
+    word-wrap: break-word; /* Quebra palavras longas nos parágrafos */
+    overflow-wrap: break-word; /* Evita o overflow do texto */
 }
 
 .p2 {
@@ -135,5 +140,10 @@ h1 {
     .texto-esquerdo, .texto-direito {
         width: 100%;
         text-align: center;
+    }
+
+    /* Garante que o conteúdo não ultrapasse a largura da tela */
+    .textooficial {
+        padding: 10px;
     }
 }
