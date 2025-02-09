@@ -10,12 +10,12 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 20px 10px;
+    flex-wrap: wrap; /* Permite que os itens quebrem para a linha de baixo se necessário */
 }
 
 .logo {
-    font-size: 3em;
+    font-size: 2.5em;
     font-weight: bold;
-
 }
 
 nav ul {
@@ -23,6 +23,7 @@ nav ul {
     margin: 0;
     padding: 0;
     display: flex;
+    flex-wrap: wrap; /* Permite que os botões se ajustem em telas menores */
 }
 
 nav ul li {
@@ -40,81 +41,99 @@ nav ul li a:hover {
 }
 
 .conteudo {
-    display: flex; /* Ativa Flexbox */
-    justify-content: center; /* Alinha os elementos horizontalmente */
-    align-items: center; /* Centraliza verticalmente */
+    display: flex;
+    flex-wrap: wrap; /* Ajusta os elementos para telas menores */
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    height: 30vh; /* Ocupa a altura total da tela */
-    background-color: #011808; /* Cor de fundo */
+    padding: 20px;
+    background-color: #011808;
 }
 
 .texto-esquerdo, .texto-direito {
-    width: 40%; /* Largura para os textos */
-    font-size: 1.3em; /* Tamanho da fonte */
-    line-height: 1; /* Espaçamento entre linhas */
+    flex: 1; /* Para melhor adaptação */
+    min-width: 300px; /* Garante que os textos não fiquem muito pequenos */
+    font-size: 1.2em;
     color: #e26600;
+    padding: 10px;
 }
+
 .imagem-container {
-    display: flex; /* Ativa o Flexbox */
-    justify-content: center; /* Centraliza horizontalmente */
-    align-items: center; /* Centraliza verticalmente */
-    height: 100vh; /* Define altura total da tela */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    margin: 20px 0;
 }
 
 .imagem-container img {
-    width: 220px; /* Define a largura */
-    height: auto; /* Mantém a proporção original */
-    border: 2px solid #00bcd4; /* Borda opcional */
-    border-radius: 135px; /* Bordas arredondadas */
+    width: 100%;
+    max-width: 220px; /* Limita o tamanho da imagem */
+    height: auto;
+    border: 2px solid #00bcd4;
+    border-radius: 50%;
 }
+
 .imagemdomeio {
-    width: 100%; /* Largura total */
+    width: 100%;
     margin: 0;
     padding: 0;
-    background-color: #18181888; /* Cor de fundo opcional */
+    background-color: #18181888;
 }
 
 .imagemdomeio img {
-    width: 100%; /* Largura total */
-    height: 600px; /* Altura desejada */
-    object-fit: contain; /* Mantém toda a imagem visível */
+    width: 100%;
+    height: auto;
+    object-fit: contain;
     display: block;
 }
 
 .textooficial {
-    background-color: #1f1f1f; /* Cor de fundo */
-    width: 100%; /* Largura para os textos */
-    font-size: 1.3em; /* Tamanho da fonte */
-    line-height: 1; /* Espaçamento entre linhas */
+    background-color: #1f1f1f;
+    width: 100%;
+    padding: 20px;
+    font-size: 1.2em;
     color: #90d6f7;
+    text-align: center;
 }
 
 h1 {
-    text-align: center; /* Centraliza o texto */
-    color: rgba(13, 106, 245, 0.808); /* Altera a cor para vermelho */
+    color: rgba(13, 106, 245, 0.808);
 }
 
-.p1 {
-    text-align: center; /* Centraliza o texto dentro do bloco */
-    color: rgb(90, 181, 255); /* Cor do texto */
-    width: 100%; /* Garante que o elemento ocupe toda a largura disponível */
-    margin: 0 auto; /* Centraliza o bloco horizontalmente */
-    display: block; /* Garante que o elemento seja tratado como bloco */
+.p1, .p2, .p3 {
+    max-width: 90%;
+    margin: 10px auto;
+    display: block;
 }
 
 .p2 {
-    text-align: center; /* Centraliza o texto dentro do bloco */
     color: green;
     font-style: italic;
-    width: 100%; /* Garante que o elemento ocupe toda a largura disponível */
-    margin: 0 auto; /* Centraliza o bloco horizontalmente */
-    display: block; /* Garante que o elemento seja tratado como bloco */
-}
-.p3 {
-    text-align: center; /* Centraliza o texto dentro do bloco */
-    color: rgb(255, 96, 96); /* Cor do texto */
-    width: 100%; /* Garante que o elemento ocupe toda a largura disponível */
-    margin: 0 auto; /* Centraliza o bloco horizontalmente */
-    display: block; /* Garante que o elemento seja tratado como bloco */
 }
 
+.p3 {
+    color: rgb(255, 96, 96);
+}
+
+/* Ajustes para telas menores */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul {
+        justify-content: center;
+        padding-top: 10px;
+    }
+
+    .conteudo {
+        flex-direction: column;
+    }
+
+    .texto-esquerdo, .texto-direito {
+        width: 100%;
+        text-align: center;
+    }
+}
